@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,11 +8,35 @@ version = "0.1.0"
 description = "CLI and terminal UI for managing DNSPod records."
 readme = "README.md"
 requires-python = ">=3.10"
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Bia951" },
+]
+keywords = ["dnspod", "dns", "cli", "tui", "tencent-cloud"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Internet :: Name Service (DNS)",
+]
 dependencies = [
     "keyring>=25",
     "requests>=2.31",
     "tencentcloud-sdk-python>=3.0.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/Bia951/dnspod-tool"
+Repository = "https://github.com/Bia951/dnspod-tool.git"
+Issues = "https://github.com/Bia951/dnspod-tool/issues"
 
 [project.scripts]
 dnspod = "dnspod_tool.main:main"

@@ -21,21 +21,21 @@ dnspod --help
 推荐给普通用户的安装方式：
 
 ```bash
-pipx install git+https://github.com/<your-name>/dnspod-tool.git
+pipx install dnspod-tool
 dnspod --help
 ```
 
-发布到 PyPI 之后：
+如需安装 GitHub 上的最新开发版本：
 
 ```bash
-pipx install dnspod-tool
+pipx install git+https://github.com/Bia951/dnspod-tool.git
 dnspod --help
 ```
 
 如果用户习惯 `uv`：
 
 ```bash
-uv tool install git+https://github.com/<your-name>/dnspod-tool.git
+uv tool install dnspod-tool
 dnspod --help
 ```
 
@@ -44,7 +44,7 @@ Linux 服务器上没有 `pipx` 或 `uv` 时，可以用虚拟环境：
 ```bash
 python3 -m venv .venv
 . .venv/bin/activate
-python -m pip install git+https://github.com/<your-name>/dnspod-tool.git
+python -m pip install dnspod-tool
 dnspod --help
 ```
 

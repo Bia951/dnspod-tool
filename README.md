@@ -2,7 +2,7 @@
 
 CLI and terminal UI for managing DNSPod domains and records.
 
-Chinese documentation: [README.zh-CN.md](README.zh-CN.md).
+Chinese documentation: [README.zh-CN.md](https://github.com/Bia951/dnspod-tool/blob/main/README.zh-CN.md).
 
 ## Installation
 
@@ -12,21 +12,21 @@ That command is created by the `[project.scripts]` entry in `pyproject.toml`.
 Recommended for normal users:
 
 ```bash
-pipx install git+https://github.com/<your-name>/dnspod-tool.git
+pipx install dnspod-tool
 dnspod --help
 ```
 
-After publishing to PyPI:
+To install the latest development version from GitHub:
 
 ```bash
-pipx install dnspod-tool
+pipx install git+https://github.com/Bia951/dnspod-tool.git
 dnspod --help
 ```
 
 If `pipx` is not available, use `uv`:
 
 ```bash
-uv tool install git+https://github.com/<your-name>/dnspod-tool.git
+uv tool install dnspod-tool
 dnspod --help
 ```
 
@@ -35,7 +35,7 @@ On a Linux server without `pipx` or `uv`, use a virtual environment:
 ```bash
 python3 -m venv .venv
 . .venv/bin/activate
-python -m pip install git+https://github.com/<your-name>/dnspod-tool.git
+python -m pip install dnspod-tool
 dnspod --help
 ```
 
