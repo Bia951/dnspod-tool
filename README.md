@@ -6,28 +6,16 @@ Chinese documentation: [README.zh-CN.md](https://github.com/Bia951/dnspod-tool/b
 
 ## Installation
 
-The Python package is named `dnspod-tool`, but the installed command is `dnspod`.
-That command is created by the `[project.scripts]` entry in `pyproject.toml`.
-
-Recommended for normal users:
+Install with `pipx`:
 
 ```bash
 pipx install dnspod-tool
-dnspod --help
 ```
 
-To install the latest development version from GitHub:
-
-```bash
-pipx install git+https://github.com/Bia951/dnspod-tool.git
-dnspod --help
-```
-
-If `pipx` is not available, use `uv`:
+Or install with `uv`:
 
 ```bash
 uv tool install dnspod-tool
-dnspod --help
 ```
 
 On a Linux server without `pipx` or `uv`, use a virtual environment:
@@ -36,13 +24,18 @@ On a Linux server without `pipx` or `uv`, use a virtual environment:
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install dnspod-tool
-dnspod --help
 ```
 
-## Development install
+To install the latest development version from GitHub:
 
 ```bash
-python -m pip install -e .
+pipx install git+https://github.com/Bia951/dnspod-tool.git
+```
+
+After installation, run `dnspod` to open the terminal UI or inspect the CLI commands:
+
+```bash
+dnspod
 dnspod --help
 ```
 

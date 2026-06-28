@@ -4,62 +4,36 @@
 
 ## 安装方式
 
-Python 包名可以叫 `dnspod-tool`，安装后的命令名可以叫 `dnspod`。这两者不需要一样。
-标准做法是在 `pyproject.toml` 里配置 `[project.scripts]`：
-
-```toml
-[project.scripts]
-dnspod = "dnspod_tool.main:main"
-```
-
-这样别人安装包以后，终端里直接运行：
-
-```bash
-dnspod --help
-```
-
-推荐给普通用户的安装方式：
+推荐使用 `pipx` 安装：
 
 ```bash
 pipx install dnspod-tool
-dnspod --help
+```
+
+也可以使用 `uv`：
+
+```bash
+uv tool install dnspod-tool
+```
+
+Linux 服务器上没有 `pipx` 或 `uv` 时，可以安装到虚拟环境：
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install dnspod-tool
 ```
 
 如需安装 GitHub 上的最新开发版本：
 
 ```bash
 pipx install git+https://github.com/Bia951/dnspod-tool.git
-dnspod --help
 ```
 
-如果用户习惯 `uv`：
+安装完成后，直接运行 `dnspod` 进入终端交互界面，或查看命令行帮助：
 
 ```bash
-uv tool install dnspod-tool
-dnspod --help
-```
-
-Linux 服务器上没有 `pipx` 或 `uv` 时，可以用虚拟环境：
-
-```bash
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install dnspod-tool
-dnspod --help
-```
-
-不推荐让普通用户运行：
-
-```bash
-python3 "dnspod apitool.py"
-```
-
-这个长文件名入口只适合作为开发期或兼容旧习惯的 launcher。
-
-## 开发安装
-
-```bash
-python -m pip install -e .
+dnspod
 dnspod --help
 ```
 
